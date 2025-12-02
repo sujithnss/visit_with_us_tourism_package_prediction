@@ -22,10 +22,10 @@ mlflow.set_experiment("mlops-training-experiment")
 api = HfApi()
 
 
-Xtrain_path = "hf://datasets/sujithpv/visit-with-us-tourism-package-prediction/visit-with-us-tourism-package-prediction-analysis/Xtrain.csv"
-Xtest_path = "hf://datasets/sujithpv/visit-with-us-tourism-package-prediction/visit-with-us-tourism-package-prediction-analysis/Xtest.csv"
-ytrain_path = "hf://datasets/sujithpv/visit-with-us-tourism-package-prediction/visit-with-us-tourism-package-prediction-analysis/ytrain.csv"
-ytest_path = "hf://datasets/sujithpv/visit-with-us-tourism-package-prediction/visit-with-us-tourism-package-prediction-analysis/ytest.csv"
+Xtrain_path = "hf://datasets/sujithpv/visit-with-us-tourism-package-prediction/Xtrain.csv"
+Xtest_path = "hf://datasets/sujithpv/visit-with-us-tourism-package-prediction/Xtest.csv"
+ytrain_path = "hf://datasets/sujithpv/visit-with-us-tourism-package-prediction/ytrain.csv"
+ytest_path = "hf://datasets/sujithpv/visit-with-us-tourism-package-prediction/ytest.csv"
 
 Xtrain = pd.read_csv(Xtrain_path)
 Xtest = pd.read_csv(Xtest_path)
@@ -132,7 +132,7 @@ with mlflow.start_run():
     print(f"Model saved as artifact at: {model_path}")
 
     # Upload to Hugging Face
-    repo_id = "sujithpv/visit-with-us-tourism-package-prediction/visit_with_us_tourism_package_prediction_model"
+    repo_id = "sujithpv/visit-with-us-tourism-package-prediction"
     repo_type = "model"
 
     # Step 1: Check if the space exists
