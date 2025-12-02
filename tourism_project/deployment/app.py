@@ -4,7 +4,7 @@ from huggingface_hub import hf_hub_download
 import joblib
 
 # Download and load the trained model for Tourism Package Purchase Prediction
-model_path = hf_hub_download(repo_id="sujithpv/visit-with-us-tourism-package-prediction/visit_with_us_tourism_package_prediction_model", filename="visit_with_us_tourism_package_prediction_model_v1.joblib")
+model_path = hf_hub_download(repo_id="sujithpv/visit-with-us-tourism-package-prediction", filename="visit_with_us_tourism_package_prediction_model_v1.joblib")
 model = joblib.load(model_path)
 
 st.title("Visit WIith Us Tourism Package Purchase Prediction")
